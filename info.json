@@ -1,0 +1,70 @@
+{
+    "title": "Title of Front Page",
+    "subtitle": "Subtitle of Front Page Goes Here.",
+    "services": [
+      {
+        "id": 1,
+        "title": "Bankruptcy",
+        "description": "Description of Bankruptcy"
+      },
+      {
+        "id": 2,
+        "title": "Juvenile Law",
+        "description": "Description of Juvenile Law"
+      },
+      {
+        "id": 3,
+        "title": "Traffic",
+        "description": "Description of Traffic Law"
+      },
+      {
+        "id": 4,
+        "title": "Veterans Benefits",
+        "description": "Description of Veterans Benefits"
+      }
+    ],
+    "attorneys": [
+      {
+        "id": 1,
+        "name": "Jonathan Jennings",
+        "title": "Managing Partner",
+        "image": "images/MrJennings.jpg",
+        "bio": "Test 123. Test123. Test 123. Test123. Test 123. Test123."
+      },
+      {
+        "id": 2,
+        "name": "John Doe",
+        "title": "Senior Partner",
+        "bio": "Michael specializes in complex commercial litigation and has successfully represented clients in numerous high-stakes cases throughout his 15-year career."
+      },
+      {
+        "id": 3,
+        "name": "John Doe",
+        "title": "Partner",
+        "bio": "Jennifer's practice focuses on real estate and estate planning, helping clients navigate complex transactions and succession planning with clarity and confidence."
+      },
+      {
+        "id": 4,
+        "name": "John Doe",
+        "title": "Associate",
+        "bio": "David brings fresh insights to our family law practice, combining empathy with strategic thinking to achieve favorable outcomes for our clients."
+      }
+    ],
+    "testimonials": [
+      {
+        "id": 1,
+        "text": "Testimonial goes here. 1Testimonial goes here. 1Testimonial goes here. Testimonial goes here. 1Testimonial goes here. 1Testimonial goes here.",
+        "author": "John Doe, CEO of Nothing"
+      },
+      {
+        "id": 2,
+        "text": "Testimonial goes here. 2Testimonial goes here. 2Testimonial goes here. 2Testimonial goes here. 2Testimonial goes here. 2Testimonial goes here.",
+        "author": "Mr. John Doe, CEO of Nothing"
+      },
+      {
+        "id": 3,
+        "text": "Testimonial goes here. 3Testimonial goes here. 3Testimonial goes here. 3Testimonial goes here. 3Testimonial goes here. 3Testimonial goes here.",
+        "author": "Jane Doe, Client"
+      }
+    ]
+  }

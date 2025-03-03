@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jennings Law Offices</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.4/vue.global.prod.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">Jennings Law Offices</div>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Practice Areas</a></li>
+            <li><a href="#attorneys">Attorneys</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1>{{ title }}</h1>
+            <p>{{ subtitle }}</p>
+            <a href="#contact" class="btn">Contact Us</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="services">
+        <div class="container">
+          <h2>Our Practice Areas</h2>
+          <div class="services-grid">
+            <div v-for="service in services" :key="service.id" class="service-card">
+              <div class="service-img">
+                <img src="/api/placeholder/300/200" alt="Service Image">
+              </div>
+              <div class="service-content">
+                <h3>{{ service.title }}</h3>
+                <p>{{ service.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="attorneys" class="attorneys">
+        <div class="container">
+          <h2>Our Attorneys</h2>
+          <div class="attorneys-grid">
+            <div v-for="attorney in attorneys" :key="attorney.id" class="attorney-card">
+              <div class="attorney-img">
+                <img :src="attorney.image" alt="Attorney Photo">
+              </div>
+              <div class="attorney-content">
+                <h3>{{ attorney.name }}</h3>
+                <p>{{ attorney.title }}</p>
+                <p>{{ attorney.bio }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="testimonials">
+        <div class="container">
+          <h2>Client Testimonials</h2>
+          <div class="testimonial-slider">
+            <div class="testimonial" v-for="testimonial in testimonials" :key="testimonial.id" v-show="currentTestimonial === testimonial.id">
+              <p>{{ testimonial.text }}</p>
+              <div class="testimonial-author">{{ testimonial.author }}</div>
+            </div>
+            <div class="slider-controls">
+              <button @click="prevTestimonial" class="btn" style="float:left">Previous</button>
+              <button @click="nextTestimonial" class="btn" style="float:right">Next</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2>Contact Us</h2>
+          <div class="contact-form">
+            <form @submit.prevent="submitForm">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" v-model="contactForm.name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" v-model="contactForm.email" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" v-model="contactForm.phone">
+              </div>
+              <div class="form-group">
+                <label for="service">Practice Area</label>
+                <select id="service" v-model="contactForm.service">
+                  <option value="">Select a Practice Area</option>
+                  <option v-for="service in services" :key="service.id" :value="service.title">
+                    {{ service.title }}
+                  </option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" v-model="contactForm.message" required></textarea>
+              </div>
+              <button type="submit" class="btn">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Jennings Law Offices LLC</h3>
+            <p>123 Legal Avenue<br>Cityville, ST 12345<br>Phone: (555) 123-4567<br>Email: info@law.com</p>
+          </div>
+          <div class="footer-column">
+            <h3>Practice Areas</h3>
+            <ul>
+              <li v-for="service in services" :key="service.id">
+                <a href="#services">{{ service.title }}</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#services">Practice Areas</a></li>
+              <li><a href="#attorneys">Attorneys</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; {{ new Date().getFullYear() }} Johnson & Associates Law Firm. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
