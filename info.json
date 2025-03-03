@@ -35,18 +35,21 @@
         "id": 2,
         "name": "John Doe",
         "title": "Senior Partner",
+        "image": "images/",
         "bio": "Michael specializes in complex commercial litigation and has successfully represented clients in numerous high-stakes cases throughout his 15-year career."
       },
       {
         "id": 3,
         "name": "John Doe",
         "title": "Partner",
+        "image": "images/",
         "bio": "Jennifer's practice focuses on real estate and estate planning, helping clients navigate complex transactions and succession planning with clarity and confidence."
       },
       {
         "id": 4,
         "name": "John Doe",
         "title": "Associate",
+        "image": "images/",
         "bio": "David brings fresh insights to our family law practice, combining empathy with strategic thinking to achieve favorable outcomes for our clients."
       }
     ],
